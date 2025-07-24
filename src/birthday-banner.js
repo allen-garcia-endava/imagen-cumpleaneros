@@ -140,6 +140,10 @@ fs.createReadStream("cumples.csv")
         let imagePath = path.join(__dirname, "../fotos", fotoNombre);
         console.log("Cargando imagen:", imagePath);
 
+        
+        if (!fs.existsSync(imagePath)) {
+          imagePath = path.join(__dirname, "../fotos", "user.png");
+          console.log("❌ Foto no encontrada, usando imagen por defecto:", imagePath);} 
         try {
           const img = await loadImage(imagePath);
           ctx.save();
