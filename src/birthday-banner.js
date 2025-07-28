@@ -70,12 +70,12 @@ fs.createReadStream("cumples.csv")
       const filaAltura = PHOTO_SIZE + 100;
 
       // Dibuja badge de la semana
-      const fechaInicio = hoy.format("MMMM DD");
-      const fechaFin = hoy.add(6, "day").format("MMMM DD");
+      const fechaInicio = hoy.format("MMM DD");
+      const fechaFin = hoy.add(6, "day").format("MMM DD");
       const textoRango = `${fechaInicio} to ${fechaFin}`;
 
       ctx.save();
-      ctx.translate(1100, 130);
+      ctx.translate(1100, 160);
       ctx.rotate(-0.1);
       ctx.fillStyle = "#FF5C45";
       ctx.font = "bold 24px Arial";
